@@ -18,7 +18,8 @@ public class ValidatorHelper {
     }
 
     public static boolean isValidMail(String mail) {
-        Pattern pattern = Pattern.compile("^.+@.+$");
+        //Pattern pattern = Pattern.compile("^.+@.+$");
+        Pattern pattern = Pattern.compile("^.+@.+\.\w+$");
         Matcher matcher = pattern.matcher(mail);
         return matcher.matches();
     }
